@@ -7,8 +7,10 @@
  */
 namespace CookieCompany.Model.Fluent
 {
+    
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class Product : ModelBase
     {
@@ -16,10 +18,14 @@ namespace CookieCompany.Model.Fluent
         {
             Code = GenerateIdCode;
         }
+        
         public string Code { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool State { get; set; }
+
+
+     
 
     }
     
