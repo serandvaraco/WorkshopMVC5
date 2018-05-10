@@ -52,13 +52,12 @@ namespace CookieCompany.Web.Controllers
         }
 
         public PartialViewResult GetImage(int id) {
-            return PartialView("GetImage", "../../images/"+ db.Product
+            return PartialView("GetImage", db.Product
                         .FirstOrDefault(x => x.Id == id)
                         ?.Image);
         }
 
         [HttpPost]
-   |||
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Image")] Product product)
         {
